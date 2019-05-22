@@ -16,7 +16,7 @@
    
     <header class="intro">
      <!-- Я так думаю картинку гор будет фоном <header>-->
-      <img class="intro__logo intro__logo_" src="css/logo.png" alt="Логотип Sedona, туристическая поездка" title="Логотип SEDONA">
+        <a href="#" target="_self"><img class="intro__logo intro__logo_" src="css/logo.png" alt="Логотип Sedona, туристическая поездка" title="Логотип SEDONA"></a>            
        
       <nav class="navigation">
         <ul class="navigation__list">
@@ -42,8 +42,11 @@
      
      <!-- Result search -->
      <section class="result-search">
+       
+        <h2 class="visual-hidden">Выбор гостиницы</h2>
+        
          <article class="result-search__hotel">
-            <img class="result-search__img" src="img/amara-resort.png" alt="Гостиница Amara Resort & Spa" >
+            <img class="result-search__img" src="img/amara-resort.png" alt="Гостиница Amara Resort & Spa" title="Гостиница Amara Resort & Spa" >
             
             <h3>Amara Resort &amp; Spa</h3>
             
@@ -52,10 +55,41 @@
             <a href="" class="result-search__details">Подробнее</a>
             <a href="" class="result-search__order">Забронировать</a>
             
-            <!-- не знаю как реализовать звездочки и рейтинг -->
+            <!-- Реализую до конца недели -->
+            <a href="" class="result-search__details result-search__details_hover">Подробнее</a>
+            <a href="" class="result-search__order result-search__order_hover">Забронировать</a>
+         </article>
+         
+         <article class="result-search__hotel">
+            <img class="result-search__img" src="img/amara-resort.png" alt="Гостиница Amara Resort & Spa" title="Гостиница Amara Resort & Spa" >
+            
+            <h3>Desert Quail Inn</h3>
+            
+            <p><span>Гостиница </span> от<span class="result-search__price">3000 Р.</span></p>
+            
+            <a href="" class="result-search__details result-search__details_hover">Подробнее</a>
+            <a href="" class="result-search__order result-search__order_hover">Забронировать</a>
+            
+            <!-- Реализую до конца недели -->
             <span class="result-search__rating-stars"></span>
             <span class="result-search__rating-number"></span>
          </article>
+         
+         <article class="result-search__hotel">
+            <img class="result-search__img" src="img/amara-resort.png" alt="Гостиница Amara Resort & Spa" title="Гостиница Amara Resort & Spa" >
+            
+            <h3>Villas At Poco Diablo</h3>
+            
+            <p><span>Гостиница </span> от<span class="result-search__price">2000 Р.</span></p>
+            
+            <a href="" class="result-search__details result-search__details_hover">Подробнее</a>
+            <a href="" class="result-search__order result-search__order_hover">Забронировать</a>
+            
+            <!-- Реализую до конца недели -->
+            <span class="result-search__rating-stars"></span>
+            <span class="result-search__rating-number"></span>
+         </article>
+         
      </section>
       
     </main>
