@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'PT Sans';
+    src: url('PT_Sans-Web-Regular.eot');
+    src: local('PT Sans'), local('P T Sans'),
+        url('PT_Sans-Web-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PT_Sans-Web-Regular.woff2') format('woff2'),
+        url('PTSans-Regular.woff') format('woff'),
+        url('PTSans-Regular.ttf') format('truetype'),
+        url('PTSans-Regular.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;    
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('PT_Sans-Web-Bold.eot');
+    src: local('PT_Sans-Web-Bold.eot'), local('PT Sans Bold'),
+        url('PT_Sans-Web-Bold.eot') format('embedded-opentype'),
+        url('PT_Sans-Web-Bold.woff2') format('woff2'),
+        url('PTSans-Bold.woff') format('woff'),
+        url('PTSans-Bold.ttf') format('truetype'),
+        url('PTSans-Bold.svg#svgFontName') format('svg');
+    font-weight: bold;
+    font-style: normal
+}
+
+body {
+    margin: 0;
+    padding: 0 40px;
+    width: 1280px;
+}
+.visually-hidden {
+    position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+p {
+    margin: 0;
+}
+
+/**    Типографика **/
+ *  {
+    font-family: 'PT Sans', Arial, sans-serif;
+    color: #000000;
+}
+
+.navigation__item a {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold; 
+}
+
+.like-title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.main-content:nth-child(3) {
+   font-size: 14px; 
+   line-height: 26px;
+}
+
+.lead-form h3 {
+    font-size: 30px;
+    line-height: 36px;
+}
+.lead-form p {
+    font-size: 14px;
+    line-height: 24px;
+}
+.lead-form__start {
+    font-size: 21px;
+    line-height: 26px;
+    background-color: #766357;
+}
+
+.lead-form__popup label, .lead-form__popup input {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+
+/** Состояния элементов **/
+.lead-form__start:hover {
+    background-color: #604e43;
+}
+.lead-form__start:active {
+    background-color: #503e33;
+}
+.lead-form__popup {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+}
+.lead-form__popup input {
+    background-color: #f2f2f2;
+}
+
+.lead-form__popup input:hover {
+    background-color: #ebebeb;
+}
+
+.lead-form__popup input:active, .lead-form__popup input:focus {
+    background-color: #ebebeb;
+}
+
+.lead-form__popup input[value="Найти"]{
+    background-color: #81b3d2;
+}
+
+.lead-form__popup input[value="Найти"]:hover {
+    background-color: #669ec0;
+}
+
+.lead-form__popup input[value="Найти"]:active {
+    background-color: #5496bd;
+}
+
+.footer-info__up {
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/**Hotel page**/
+
+.result-search__hotel h3 a {
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+.result-search__hotel h3 a:hover {
+    color: #81b3d2;
+}
+
+.result-search__hotel h3 a:active {
+    color: rgba(0 0 0 0.3);
+}
+.result-search__hotel span {
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+.result-search__details, .result-search__order {
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.result-search__details_bg {
+    background-color: #81b3d2;
+}
+
+.result-search__details_bg:hover, .result-search__details_bg:focus {
+    background-color: #669ec0;
+}
+
+.result-search__details_bg:active {
+    background-color: #5496bd;
+    color: rgba(0 0 0 0.3);
+}
+
+.result-search__order_bg {
+    background-color: #766357;
+}
+
+.result-search__order_bg:hover, .result-search__order_bg:focus  {
+    background-color: #604e43;
+}
+
+.result-search__order_bg:active {
+    background-color: #503e33;
+    color: rgba(0 0 0 0.3);
+}
+
+
+
+
+/* Фоновые свойства*/
+.intro__logo {
+    max-width: 100px;
+}
+.navigation {
+    background-color: #ffffff;
+}
+.footer-info__socials a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 0px;
+    background-color: #000;
+}
+
+.footer-info__socials img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
