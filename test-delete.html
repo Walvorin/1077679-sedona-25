@@ -4,37 +4,51 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        .flex {
-            width: 800px;
-            height: 8000px;
-            margin: 0 auto;
-            background-color: #ccc;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: flex-end;
-        }
-        .flex-element {
-            width: 300px;
-            height: 200px;
-            background-color: blue;
-            border: 1px solid black;
-        }
+        
+
+
+
         
     </style>
 </head>
 <body>
-<div class="flex">
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-    <div class="flex-element"></div>
-</div>
+    <header class="main-header">
+        <div class="main-header__head">
+            Header
+        </div>
+        <div class="menu-layout">
+           <div class="positioner">
+            <ul class="main-menu">
+                <li>
+                    Menu
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="positioner">
+        <div class="promo promo-1">Promo 1</div>
+        <div class="promo promo-2">Promo 2</div>
+        </div>
+    </header>
+    <main class="main-content clear">
+        <div class="positioner">
+            <div class="left content-item">
+                Left
+            </div>
+            <div class="center content-item">
+                Main
+            </div>
+            <div class="right content-item">
+                Right
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="positioner">
+           <div class="main-footer__content">
+            Footer
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
