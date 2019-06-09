@@ -49,6 +49,7 @@ a {
 li {
     list-style: none;
 }
+
 p {
     margin: 0;
 }
@@ -85,6 +86,7 @@ p {
     line-height: 24px;
 }
 .lead-form__start {
+    display: block;
     font-size: 21px;
     line-height: 26px;
     background-color: #766357;
@@ -179,7 +181,7 @@ p {
     color: rgba(0 0 0 0.3);
 }
 
-.result-search__order_bg {
+.result-search__order {
     background-color: #766357;
 }
 
