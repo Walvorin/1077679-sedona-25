@@ -15,12 +15,11 @@
   <body>
    
     <header class="intro">
-     <!-- Я так думаю картинку гор будет фоном <header>-->
-        <a href="#" target="_self"><img class="intro__logo intro__logo_" src="img/logo-sedona.svg" alt="Логотип Sedona, туристическая поездка" title="Логотип SEDONA"></a>            
+      <a class="intro__link-logo" href="#"><img class="intro__logo" src="img/logo-sedona.svg" alt="Sedona, туристическая поездка в небольшой город в Аризоне" title="Логотип SEDONA"></a>
        
       <nav class="navigation">
         <ul class="navigation__list">
-          <li class="navigation__item navigation__item_activ">
+          <li class="navigation__item">
             <a href="#">Информация</a>
           </li>
           <li class="navigation__item">
@@ -29,12 +28,11 @@
           <li class="navigation__item">
             <a href="#">Карта штата</a>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item  navigation__item_activ">
             <a href="#">Гостиницы</a>
           </li>
         </ul>
       </nav>
-        <img class="wellcome" src="img/background_header.png" alt="Добро пожаловать в Sedona" title="Добро пожаловать в Sedona">
 	</header>
    
     <main class="main-content">
@@ -46,16 +44,23 @@
         <h2 class="visually-hidden">Выбор гостиницы</h2>
         
          <article class="result-search__hotel">
+            
             <img class="result-search__img" src="img/amara-resort-hotel.jpg" alt="Гостиница Amara Resort & Spa" title="Гостиница Amara Resort & Spa" >
             
-            <h3><a href="">Amara Resort &amp; Spa</a></h3>
+            <div class="hotel-info">
+                <h3><a href="">Amara Resort &amp; Spa</a></h3>
             
-            <p><span>Гостиница </span> от<span class="result-search__price">4000 Р.</span></p>
+                <p><span>Гостиница </span> <span>от 4000 Р.</span></p>
             
+                <a href="#" class="hotel-info__details">Подробнее</a>
             
-            <a href="#" class="result-search__details">Подробнее</a>
+                <a href="#" class="hotel-info__order">Забронировать</a>
+            </div>
             
-            <a href="#" class="result-search__order">Забронировать</a>
+            <div class="hotel-rating">
+                <span class="hotel-rating__star"></span>
+                <span class="hotel-rating__total">Рейтинг:8,5</span>
+            </div>
             
          </article>
          
@@ -63,32 +68,37 @@
            
             <img class="result-search__img" src="img/deser-quilin-hotel.jpg" alt="ГостиницаDesert Quail Inn" title="Гостиница Desert Quail Inn" >
             
-            <h3><a href="">Desert Quail Inn</a></h3>
+            <div class="hotel-info">
+                <h3><a href="">Desert Quail Inn</a></h3>
             
-            <p><span>Гостиница </span> от<span class="result-search__price">3000 Р.</span></p>
+                <p><span>Гостиница </span> от<span class="result-search__price">3000 Р.</span></p>
             
-            <a href="" class="result-search__details">Подробнее</a>
+                <a href="#" class="hotel-info__details">Подробнее</a>
             
-            <a href="" class="result-search__order">Забронировать</a>
-            
+                <a href="#" class="hotel-info__order">Забронировать</a>
+             </div>
             <!-- Реализую до конца недели -->
-            <span class="result-search__rating-stars"></span>
-            <span class="result-search__rating-number"></span>
+            <div class="hotel-rating">
+                <span class="hotel-rating__star"></span>
+                <span class="hotel-rating__total">Рейтинг:8,9</span>
+            </div>
          </article>
          
          <article class="result-search__hotel">
             <img class="result-search__img" src="img/villas-diablo-hotel.jpg" alt="Гостиница Villas At Poco Diablo" title="Гостиница Villas At Poco Diablo" >
+            <div class="hotel-info">
+                <h3><a href="">Villas At Poco Diablo</a></h3>
             
-            <h3><a href="">Villas At Poco Diablo</a></h3>
+                <p><span>Гостиница </span> от<span class="result-search__price">2000 Р.</span></p>
             
-            <p><span>Гостиница </span> от<span class="result-search__price">2000 Р.</span></p>
-            
-            <a href="" class="result-search__details">Подробнее</a>
-            <a href="" class="result-search__order">Забронировать</a>
-            
-            <!-- Реализую до конца недели -->
-            <span class="result-search__rating-stars"></span>
-            <span class="result-search__rating-number"></span>
+                <a href="" class="hotel-info__details">Подробнее</a>
+                <a href="" class="hotel-info__order">Забронировать</a>
+             </div>
+             
+            <div class="hotel-rating">
+                <span class="hotel-rating__star"></span>
+                <span class="hotel-rating__total">Рейтинг:9,2</span>
+            </div>
          </article>
          
      </section>
