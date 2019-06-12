@@ -74,40 +74,8 @@ p {
 header.intro {
     position: relative;
     height: 56px;
-    width: 100%;
-    /*box-sizing: border-box;
-    background-image: url(../img/background_header.png);
-    background-repeat: no-repeat;
-    margin-bottom: 62px;*/
-    
+    width: 100%;  
 }
-
-
-/*header.intro::before {
-    content: "";
-    display: inline-block;
-    width: 458px;
-    height: 353px;
-    background-image: url(../img/welcome.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    margin: 0 auto;
-    top: 132px;
-    left: 371px; 
-}
-
-header.intro::after{
-    content: "";
-    display: block;
-    width: 1200px;
-    height: 60px;
-    background-image: url(../img/bottom_header.svg);
-    position: absolute;
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-} На удаление        */
 
 .navigation {
     width: 1200px;
