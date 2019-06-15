@@ -472,6 +472,170 @@ input[type="submit"] {
 
 /**Hotel page**/
 
+/*        Form for serch hotel     */
+
+.search-form-block {
+    width: 100%;
+    height: 303px;
+    display: flex;
+}
+
+.search-form-block .search-form-hotel {
+    width: 100%;
+    height: 217px;
+    outline: 1px solid black;
+    background-image: url(../img/filter%20background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 32px 72px;
+    display: flex;
+}
+
+.search-form-hotel p {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+    margin-bottom: 28px;
+}
+
+.search-form-hotel label {
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 22px;
+}
+
+.search-form-hotel label:hover, .search-form-hotel label:focus {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.search-form-hotel label::before {
+    display: inline-block;
+    content: "";
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 17px;
+}
+
+.search-form-hotel input[type="checkbox"]:checked + label::before {
+    width: 27px;
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 11px;
+}
+
+.search-form-hotel input[type="checkbox"]:disabled + label, .search-form-hotel input[type="checkbox"]:checked + label  {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.search-form-hotel input[type="checkbox"]:disabled + label::before {
+    width: 27px;
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 11px;
+    opacity: 0.6;
+}
+
+.search-form-hotel__input input[type="checkbox"] {
+    display: none;
+}
+
+.infrastructure, .type-house, .price-per-day {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.infrastructure {
+    margin-right: 115px;
+}
+
+.type-house {
+    margin-right: auto;
+}
+
+.price-per-day .out-range {
+    width: 318px;
+    height: 36px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.price-per-day .out-range {
+    margin-bottom: 10px;
+}
+
+.price-per-day .out-range>span {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    line-height: 26px;
+}
+
+.price-per-day .out-range span:first-child::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 22px;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    border-radius: 1px;
+}
+
+.price-per-day input[type="range"] {
+    margin-bottom: 23px;
+}
+
+.price-per-day input[type="submit"] {
+    width: 137px;
+    height: 36px;
+    border: 2px solid #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    background: none;
+    padding: 6px 0px;
+    border-radius: 2px;
+    margin: 0 auto;
+    
+}
+
+.price-per-day input[type="submit"]:hover, .price-per-day input[type="submit"]:focus {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*       End Form for serch hotel     */
+
 .result-search__hotel {
     padding: 30px 72px;
     height: 152px;
