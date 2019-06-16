@@ -11,7 +11,9 @@
   <body>
 <!-- Не доверстал элементы в модальном окне и в форме поиска на странице поиска отелей, там где ползунок подскажите как мне это сделать, также блок с сортировкой сделаю сегодня и js тоже  -->
 	<header class="intro">
-      <a class="intro__link-logo" href="#"><img class="intro__logo" src="img/logo-sedona.svg" alt="Sedona, туристическая поездка в небольшой город в Аризоне" title="Логотип SEDONA"></a>
+      <a class="intro__link-logo" href="#">
+          <img class="intro__logo" width="140" height="71" src="img/logo-sedona.svg" alt="Sedona, туристическая поездка в небольшой город в Аризоне" title="Логотип SEDONA">
+      </a>
        
       <nav class="navigation">
         <ul class="navigation__list">
@@ -34,7 +36,7 @@
     <main class="main-content">
        
         <div class="sedona-mountain">
-           <img src="img/background_header.png" alt="Шикарные пейзажы гор и лесного массива, Добро пожаловать в Седону!" title="Шикарные пейзажы гор и лесного массива, Добро пожаловать в Седону!">
+           <img src="img/background_header.png" width="1200" height="773" alt="Шикарные пейзажы гор и лесного массива, Добро пожаловать в Седону!" title="Шикарные пейзажы гор и лесного массива, Добро пожаловать в Седону!">
         </div>
         
         <h1 class="visually-hidden">
@@ -59,7 +61,7 @@
                     </p>
                 </div>
                 <div class="illustration__picture">
-                    <img src="img/content-right.png" alt="Уютный городок с удобной инфраструкторой и теплой атмосферой" title="Уютный городок с удобной инфраструкторой и теплой атмосферой">
+                    <img src="img/content-right.png" width="800" height="401" alt="Уютный городок с удобной инфраструкторой и теплой атмосферой" title="Уютный городок с удобной инфраструкторой и теплой атмосферой">
                 </div>
                 
             </div>
@@ -101,7 +103,7 @@
 
                 </div>
                 <div class="illustration__picture">
-                    <img src="img/content-left.png" alt="Прекрасный пейзаж гор не оставит вас равнодушным" title="Прекрасный пейзаж гор не оставит вас равнодушным">
+                    <img src="img/content-left.png" width="800" height="401"  alt="Прекрасный пейзаж гор не оставит вас равнодушным" title="Прекрасный пейзаж гор не оставит вас равнодушным">
                 </div>
                 
             </div>
@@ -146,20 +148,20 @@
             <form id="form-for-action" action="https://htmlacademy" class="lead-form__popup visually-hidden" method="get">
                 <label for="date-come" tabindex="0">Дата заезда</label>
                 
-                <input id="date-come" type="date" name="date-come" value="" placeholder="22.09.2019" required>
+                <input id="date-come" type="date" name="date-come" value=""  required>
                 
                 <label for="date-out" tabindex="0">Дата выезда</label>
                 
-                <input id="date-out" type="date" placeholder="23.09.2019" required>
+                <input id="date-out" type="date" required>
                 
-                <label tabindex="0" alt="Количество взрослых">
+                <label tabindex="0">
                    Взрослые
-                    <input type="range" required>
+                    <input type="range">
                 </label>
                 
-                <label tabindex="0" alt="Количество детей"> 
+                <label tabindex="0"> 
                    Дети
-                    <input type="range" required>
+                    <input type="range">
                 </label>
                 
                 <input type="submit" value="Найти" >
@@ -167,7 +169,7 @@
         </section>
         
         <div class="map-navigation">
-            <img src="img/map.jpg" alt="Карта. Как добраться до Седоны" title="Карта. Как добраться до Седоны" class="map-navigation__element">
+            <img src="img/map.jpg" width="1200" height="593" alt="Карта. Как добраться до Седоны" title="Карта. Как добраться до Седоны" class="map-navigation__element">
         </div>
         
     </main>
