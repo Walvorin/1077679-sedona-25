@@ -145,21 +145,29 @@
                 Поиск гостиницы в Седоне
             </a>
             
-            <form id="form-for-action" action="https://htmlacademy" class="lead-form__popup visually-hidden" method="get">
-                <label for="date-come" tabindex="0">Дата заезда</label>
+            <form id="form-for-action" action="https://htmlacademy" class="lead-form__popup" method="get">
+               
+                <label for="date-come" tabindex="0">Дата заезда
                 
-                <input id="date-come" type="date" name="date-come" value=""  required>
+                    <input id="date-come" type="date" name="date-come" value=""  required>
+                    
+                    <button class="button-calendar"></button>
+                    
+                </label>
                 
-                <label for="date-out" tabindex="0">Дата выезда</label>
+                <label for="date-out" tabindex="0">Дата выезда
                 
-                <input id="date-out" type="date" required>
+                    <input id="date-out" type="date" required>
                 
-                <label tabindex="0">
+                    <button class="button-calendar"></button>
+                </label>
+                
+                <label tabindex="0" class="range">
                    Взрослые
                     <input type="range">
                 </label>
                 
-                <label tabindex="0"> 
+                <label tabindex="0" class="range"> 
                    Дети
                     <input type="range">
                 </label>

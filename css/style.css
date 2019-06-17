@@ -352,23 +352,64 @@ header.intro {
     width: 568px;
     background-color: #ffffff;
     position: absolute;
-    left: 508px;
+    left: 50%;
+    margin-left: -23.6%;
     display: flex;
     padding: 55px;
    flex-direction: row;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
-.lead-form__popup label {
-    margin-right: 20px;
+.lead-form__popup label[for^="date"] {
+    line-height: 38px;
+    height: 38px;
+    margin-bottom: 29px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    display: flex;
+}
+
+.lead-form__popup label[class="range"] {
     line-height: 38px;
     height: 38px;
     margin-bottom: 29px;
 }
 
+
+.lead-form__popup input[type="date"] {
+    margin-left: 20px;
+    width: auto;
+}
+
+.lead-form__popup .button-calendar {
+    width: 21px;
+    height: 22px;
+    position: absolute;
+    z-index: 2;
+    top: 8px;
+    right: 9px;
+    background-image: url(../img/calendar.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.lead-form__popup .button-calendar:hover, .lead-form__popup .button-calendar:focus  {
+    opacity: 1;
+}
+
+.lead-form__popup .button-calendar:active {
+    fill: #81b3d2;
+}
+
 .lead-form__popup input:not(:last-child) {
     border: none;
     padding-left: 13px;
+    padding-right: 30px;
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
@@ -390,7 +431,7 @@ header.intro {
     font-weight: bold;
 }
 
-input[type="submit"] {
+.lead-form__popup input[type="submit"] {
     color: #ffffff;
     font-size: 21px;
     text-transform: uppercase;
@@ -398,6 +439,7 @@ input[type="submit"] {
     padding: 20px;
     font-weight: bold;
 }
+
 
 
 /*       Конец Форма обратной связи        */
@@ -448,6 +490,7 @@ input[type="submit"] {
 }
 
 .lead-form__popup input {
+    
     background-color: #f2f2f2;
 }
 
@@ -515,7 +558,7 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-.search-form-hotel label::before {
+.search-form-hotel .psevdo-checkbox::before {
     display: inline-block;
     content: "";
     width: 21px;
@@ -527,7 +570,7 @@ input[type="submit"] {
     margin-right: 17px;
 }
 
-.search-form-hotel input[type="checkbox"]:checked + label::before {
+.search-form-hotel input[type="checkbox"]:checked + .psevdo-checkbox::before {
     width: 27px;
     background-image: url(../img/checkbox-on.svg);
     background-repeat: no-repeat;
@@ -535,22 +578,18 @@ input[type="submit"] {
     margin-right: 11px;
 }
 
-.search-form-hotel input[type="checkbox"]:disabled + label, .search-form-hotel input[type="checkbox"]:checked + label  {
+.search-form-hotel input[type="checkbox"]:disabled + .psevdo-checkbox, .search-form-hotel input[type="checkbox"]:checked + label  {
     color: #ff0000;
     font-weight: bold;
 }
 
-.search-form-hotel input[type="checkbox"]:disabled + label::before {
+.search-form-hotel input[type="checkbox"]:disabled + .psevdo-checkbox::before {
     width: 27px;
     background-image: url(../img/checkbox-on.svg);
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 11px;
     opacity: 0.6;
-}
-
-.search-form-hotel__input input[type="checkbox"] {
-    display: none;
 }
 
 .infrastructure, .type-house, .price-per-day {
@@ -567,7 +606,78 @@ input[type="submit"] {
     margin-right: auto;
 }
 
-.price-per-day .out-range {
+
+/* Секция с ползунками */
+.filter-range {
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+p.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  top: 50%;
+  left: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  width: 50%;
+
+  font-size: 14px;
+  line-height: 38px;
+
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  display: inline-block;
+    vertical-align: middle;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+/*.price-per-day .out-range {
     width: 318px;
     height: 36px;
     border: 2px solid #ffffff;
@@ -625,7 +735,7 @@ input[type="submit"] {
     background-color: #ffffff;
     color: #000000;
 }
-
+*/
 
 
 
