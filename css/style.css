@@ -190,13 +190,17 @@ header.intro {
 }
 /*            Описание преимуществ         */
 
-.advantage-description {
-    margin: 0 auto;
+/*
+.advantage {
     width: 100%;
+}
+
+.advantage ul {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
 
 .illustration {
     position: relative;
@@ -281,7 +285,7 @@ header.intro {
     padding: 60px 73px 88px 73px;
 }
 
-.explanation.with-icon div:first-child::before {
+.with-icon div:first-child::before {
     content: "";
     display: block;
     width: 77px;
@@ -291,7 +295,7 @@ header.intro {
     margin-bottom: 32px;
 }
 
-.explanation.with-icon div:nth-child(2)::before {
+.with-icon div:nth-child(2)::before {
     content: "";
     display: block;
     width: 74px;
@@ -310,7 +314,7 @@ header.intro {
     margin: 0 auto;
     margin-bottom: 32px;
 }
-
+*/
 
 
 /*            Секция с обратной связью         */
