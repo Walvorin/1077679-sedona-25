@@ -396,6 +396,8 @@ header.intro {
     z-index: 2;
     top: 8px;
     right: 9px;
+    background-color: transparent;
+    border: none;
     background-image: url(../img/calendar.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -412,7 +414,7 @@ header.intro {
     fill: #81b3d2;
 }
 
-.lead-form__popup input:not(:last-child) {
+.lead-form__popup input[type="date"]:not(:last-child) {
     border: none;
     padding-left: 13px;
     padding-right: 30px;
@@ -431,7 +433,7 @@ header.intro {
     border: none;
 }
 
-.lead-form__popup label, .lead-form__popup input:not(type="submit") {
+.filter-range-block label, .filter-range-block input:not(type="submit") {
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
@@ -446,21 +448,71 @@ header.intro {
     font-weight: bold;
 }
 
-.lead-form__popup .adults, .lead-form__popup .children {
-    position: relative;
+
+/*        Нижний блок ползунки    */
+
+.filter-range-block {
+    width: 50%;
+    display: flex;
+    margin-bottom: 54px;
+}
+.range.adults, .range.children {
+    width: 50%;
+   line-height: 26px;
+    text-align: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
-.lead-form__popup  .minus, .lead-form__popup .plus {
+.range.adults {
+    margin-right: auto;
+}
+
+.range.children {
+    margin-right: auto;
+}
+
+.wrapper-range {
+    width: 114px;
+    height: 38px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+
+.wrapper-range  .minus-btn, .lead-form__popup .plus-btn {
     width: 26px;
     height: 26px;
     background-color: #f2f2f2;
     border: none;
-    position: relative;
-    padding: 0;
-    margin: 0;
+    position: absolute;
+    
 }
 
-.lead-form__popup .minus::before {
+.wrapper-range input[type="text"] {
+    width: 114px;
+    border: none;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 6px 35px;
+    text-align: center;
+    
+}
+
+
+.wrapper-range  .minus-btn {
+    top: 6px;
+    left: 6px;
+}
+
+.wrapper-range .plus-btn {
+    top: 6px;
+    right: 6px;
+}
+
+.minus-btn::before {
     content: "";
     position: absolute;
     display: block;
@@ -469,34 +521,35 @@ header.intro {
     background-color: #a9a9a9;
 }
 
-.lead-form__popup .minus::before {
+.minus-btn::before {
     top: 24%;
     left: 44%;
     
     transform: rotate(90deg);
 }
 
-.lead-form__popup .plus::before, .lead-form__popup .plus::after {
+.wrapper-range .plus-btn::before, .wrapper-range .plus-btn::after {
     content: "";
     position: absolute;
     display: block;
     width: 3px;
     height: 13px;
     background-color: #a9a9a9;
+    
 }
 
-.lead-form__popup .plus::before  {
+.wrapper-range .plus-btn::before  {
     top: 6px;
     left: 12px;
     transform: rotate(90deg);
 }
 
-.lead-form__popup .plus::after {
+.wrapper-range .plus-btn::after {
     top: 25%;
     left: 45%;
 }
 
-.minus:hover::before, .plus:hover::before, .plus:hover::after {
+.minus-btn:hover::before, .plus-btn:hover::before, .plus-btn:hover::after {
     background-color: #000000;
 }
 

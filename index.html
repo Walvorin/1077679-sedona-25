@@ -162,23 +162,30 @@
                     <button class="button-calendar"></button>
                 </label>
                 
-                <label tabindex="0" class="range adults">
-                   Взрослые
-                   <div>
-                        <button class="minus"></button>
+                <div class="filter-range-block">
+                    <label tabindex="0" class="range adults">
+                   Взрослые:
+                    </label>
+                   <div class="wrapper-range">
+                        <button class="minus-btn"></button>
                         <input type="text" value="2">
-                        <button class="plus"></button>
+                        <button class="plus-btn"></button>
                     </div>
-                </label>
                 
-                <label tabindex="0" class="range children"> 
-                   Дети
-                   <div>
-                        <button class="minus"></button>
-                        <input type="text" value="0">
-                        <button class="plus"></button>
+                </div>
+                
+                <div class="filter-range-block">
+                    <label for="children" tabindex="0" class="range children"> 
+                   Дети:
+                    </label>
+                    <div class="wrapper-range">
+                        <button class="minus-btn"></button>
+                        <input id="children" type="text" value="0">
+                        <button class="plus-btn"></button>
                     </div>
-                </label>
+                </div>
+                
+                
                 
                 <input type="submit" value="Найти" >
             </form>
