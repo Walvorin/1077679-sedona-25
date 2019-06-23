@@ -365,6 +365,11 @@ header.intro {
    flex-direction: row;
     flex-wrap: wrap;
     z-index: 1;
+    display: none;
+}
+
+.lead-form__popup_show {
+    display: flex;
 }
 
 .lead-form__popup label[for^="date"] {
