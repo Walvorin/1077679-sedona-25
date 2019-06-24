@@ -3,9 +3,7 @@ var hotelPopup = document.querySelector(".lead-form__popup");
 
 link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    hotelPopup.classList.add("lead-form__popup_show");
-    console.log("Нажата кнопка регистрации в гостинице");
-    
+    hotelPopup.classList.toggle("lead-form__popup_show");  
 });
 
 
