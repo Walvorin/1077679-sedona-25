@@ -138,7 +138,8 @@
             
             <form class="lead-form__popup" id="form-for-action" action="https://htmlacademy"  method="get">
                
-                <label for="date-come" tabindex="0">Дата заезда
+                <label class="date date-come" for="date-come" tabindex="0">
+                <span>Дата заезда:</span>
                 
                     <input id="date-come" type="text" name="date-come" value="24 Апреля 2017"  required>
                     
@@ -146,14 +147,15 @@
                     
                 </label>
                 
-                <label for="date-out" tabindex="0">Дата выезда
+                <label class="date date-out" for="date-out" tabindex="0">
+                <span>Дата выезда:</span>
                 
-                    <input id="date-out" type="text" required>
+                    <input id="date-out" type="text" value="4 Июля 2017" required>
                 
                     <button class="button-calendar"></button>
                 </label>
                 
-                <div class="filter-range-block">
+                <div class="range-block filter-range-block">
                     <label tabindex="0" class="range adults">
                    Взрослые:
                     </label>
@@ -165,7 +167,7 @@
                 
                 </div>
                 
-                <div class="filter-range-block">
+                <div class="range-block filter-range-block">
                     <label for="children" tabindex="0" class="range children"> 
                    Дети:
                     </label>
