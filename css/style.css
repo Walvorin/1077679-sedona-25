@@ -920,7 +920,10 @@ p.filter-range-title {
 /*       End Form for serch hotel     */
 
 .result-search__hotel {
-    padding: 24px 72px;
+    padding-left: 72px;
+    padding-right: 75px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     height: 152px;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
@@ -1046,7 +1049,6 @@ p.filter-range-title {
     height: 17px;
     background-image: url(../img/star.svg);
     align-self: flex-end;
-    margin-right: 3px;
     margin-top: 4px;
 }
 
