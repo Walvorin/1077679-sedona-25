@@ -408,7 +408,8 @@ header.intro {
     width: auto;
 }
 
-.lead-form__popup .button-calendar {
+label.date::after {/*last div with button-calendar*/
+    content: "";
     width: 21px;
     height: 22px;
     position: absolute;
