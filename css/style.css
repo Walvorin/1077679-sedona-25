@@ -33,8 +33,8 @@ body {
     font-size: 14;
     font-family: 'PT Sans', Arial, sans-serif;
     color: #000000;
-    outline: 1px solid black;
     position: relative;
+    box-shadow:  0px 0 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -573,12 +573,6 @@ header.intro {
     background-color: #000000;
 }
 
-
-
-
-
-
-
 /*       Конец Форма обратной связи        */
 
 /*        Раздел Карта         */
@@ -588,6 +582,11 @@ header.intro {
     position: relative;
     height: 593px;
     margin-bottom: -120px;
+    background-color: #ffffff;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
 }
 
 .map-navigation img {
@@ -667,7 +666,6 @@ header.intro {
 .search-form-block .search-form-hotel {
     width: 100%;
     height: 215px;
-    outline: 1px solid black;
     background-image: url(../img/filter%20background.png);
     background-position: 0px -55px;
     background-repeat: no-repeat;
@@ -710,7 +708,7 @@ header.intro {
     background-image: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    margin-right: 17px;
+    margin-right: 18px;
 }
 
 .search-form-hotel input[type="checkbox"]:checked + .psevdo-checkbox::before {
@@ -1081,7 +1079,12 @@ img.intro__logo {
     background-color: #ffffff;
 }
 
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
 
+  border: none;
+}
 
 
 
@@ -1091,9 +1094,9 @@ img.intro__logo {
     width: 100%;
     box-sizing: border-box;
     height: 120px;
-    background-color: rgba(255,255,255);
+    background-color: #ffffff;
     opacity: 0.9;
-    
+    z-index: 5;
 }
 .footer-info {
     display: flex;
