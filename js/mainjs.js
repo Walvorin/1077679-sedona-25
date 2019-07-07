@@ -1,25 +1,56 @@
-var link = document.querySelector(".lead-form__start");
+var buttonShowForm = document.querySelector(".lead-form__start");
 
-var searchHotel = document.querySelector(".lead-form__popup");
+var openForm = document.querySelector(".lead-form__popup");
 var form = document.querySelector("form");
 
-var inCome = document.querySelector("[id=date-come]");
+var dateInCome = document.querySelector("[id=date-come]");
 
-var outCome  = document.querySelector("[id=date-out]");
+var dateOutCome  = document.querySelector("[id=date-out]");
 
+var adult = openForm.querySelector("[name=adult]");
+var children = openForm.querySelector("[name=children]");
+
+var popupClose = document.querySelector(".map-navigation");
+
+
+var isStorageSupport = true;
+var storage = "";
+
+try {
+   storage = localStorage.getItem("adult");
+   storage = localStorage.getItem("children");
+ } catch (err) {
+   isStorageSupport = false;
+ }
                                       
                                       
 
-link.addEventListener("click", function(evt) {
+buttonShowForm.addEventListener("click", function(evt) {
     evt.preventDefault();
-    searchHotel.classList.toggle("lead-form__popup_show");
-    inCome.focus();
+    openForm.classList.toggle("lead-form__popup_show");
+    popupClose.classList.remove("lead-form__popup_show");
+    
+    if(storage) {
+        dateInCome.value = storage;
+        dateOutCome.focus();
+    } else {
+        dateInCome.focus();
+    }
 });
+
+
+
+
 
 form.addEventListener("submit"), function(evt) {
     
-    if (!inCome.value || !outCome.value){
+    if (!dateInCome.value || !dateOutCome.value){
         evt.preventDefault();
         console.log("Нужно ввести дату заезда и выезда");
-    }  
+    }  else {
+        if (isStorageSupport) {
+            localStorage.setItem("dateIn", "dateInCome")
+            }
+        
+    }
 }

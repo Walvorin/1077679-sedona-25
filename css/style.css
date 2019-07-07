@@ -50,11 +50,13 @@ body {
     height: auto;
     outline: 1px solid black;
      margin: 0 auto;
+    background-color: #f2f2f2;
 }
 
 .main-wrapper {
     width: 1200px;
     margin: 0 auto;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -202,7 +204,7 @@ body {
     font-weight: bold;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 33px;
+    margin-bottom: 31px;
     width: 450px;
     text-transform: uppercase;
     letter-spacing: 0.1px;
@@ -362,7 +364,7 @@ body {
 .gray-item span {
     display: inline-block;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .gray-item p {
@@ -374,6 +376,13 @@ body {
 
 
 /*            ФОРМА ОБРАТНОЙ СВЯЗИ        */
+
+@keyframes bounce {
+    0% { transform: translateY(-200px); opacity: 0;}
+    70% {transform: translateY(30px); opacity: 0.6;}
+    90% {transform: translateY(-10px); opacity: 0.8;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
 
 .lead-form {
     text-align: center;
@@ -432,144 +441,105 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -284px;
-    padding: 55px;
-   flex-direction: row;
+    padding-top: 55px;
+    padding-right: 55px;
+    padding-bottom: 55px;
+    padding-left: 56px;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
     z-index: 1;
-    display: none;
-}
-
-.lead-form__popup .close {
-    display: none;
+    animation-name: appearance;
+  animation-duration: 5s;
 }
 
 .lead-form__popup_show {
     display: flex;
+    animation-name: bounce;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
 }
 
-.lead-form__popup label[for^="date"] {
-    line-height: 38px;
-    height: 38px;
-    margin-bottom: 29px;
-    position: relative;
+.come-in-hotel, .come-out-hotel {
     width: 100%;
+    align-self: center;
+    font-family: 'PT Sans', Arial, sans-serif;
     text-align: left;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'PT Sans', Arial, sans-serif;
-    font-weight: bold;
 }
 
-.lead-form__popup label[for^="date"]:hover, .lead-form__popup label[for^="date"]:focus {
+.come-in-hotel {
+    margin-bottom: 29px;
+}
+.come-out-hotel {
+    margin-bottom: 30px;
+}
+
+.come-in-hotel label, .come-out-hotel label {
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: auto;
+    letter-spacing: 0.3px;
+}
+
+.come-in-hotel input[type="text"], .come-out-hotel input[type="text"] {
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 13px;
+    padding-right: 40px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f2f2f2;
+    width: 346px; 
+}
+
+.come-in-hotel input[type="text"]:hover , .come-out-hotel input[type="text"]:hover {
+    background-color: #ebebeb;
     outline: none;
 }
 
-.date span {
-    margin-right: auto;
-    font-size: 14px;
-    line-height: 26px;
-    letter-spacing: 0.2px;
-    padding-left: 1px;
+.come-out-hotel input[type="text"]:focus, .come-in-hotel input[type="text"]:focus {
+    background-color: #ffffff;
+    outline: none;
+    border: 2px solid #e5e5e5;
+    padding-left: 11px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 11px;
+    padding-right: 38px;
 }
 
-.lead-form__popup label[class="range"] {
-    line-height: 38px;
-    height: 38px;
-    margin-bottom: 29px;
-}
-
-
-.lead-form__popup input[type="date"] {
-    margin-left: 20px;
-    width: auto;
-}
-
-/*label.date::after {/*last div with button-calendar*/
-    /*content: "";
-    width: 21px;
-    height: 22px;
-    position: absolute;
-    z-index: 2;
-    top: 8px;
-    right: 9px;
-    background-color: transparent;
-    border: none;
-    background-image: url(../img/calendar.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
-    margin: 0;
-    opacity: 0.3;
-}*/
-
-.calendar {
+button.calendar {
     width: 25px;
     height: 25px;
     position: absolute;
     z-index: 2;
-    top: 5px;
+    top: 8px;
     right: 6px;
     background-color: transparent;
     fill: #cacaca;
     padding: 0;
     margin: 0;
     border: none;
-    outline: none;
 }
 
-.calendar {
-    -webkit-appearance: none;
-}
-
-.calendar svg {
-    width: 21px;
-}
-
-.calendar:hover svg{
+.calendar:hover svg, .calendar:focus svg {
     fill: #000000;
 }
 
 .calendar:active svg{
     fill: #81b3d2;
 }
-
-.lead-form__popup .button-calendar:hover, .lead-form__popup .button-calendar:focus  {
-    opacity: 1;
-}
-
-.lead-form__popup .button-calendar:active {
-    fill: #81b3d2;
-}
-
-.date input[type="text"] {
-    border: none;
-    padding: 0;
-    padding-left: 13px;
-    padding-right: 40px;
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: bold;
-    background-color: #f2f2f2;
-    height: 38px;
-    width: 346px;
-    text-transform: uppercase;
-}
-
-.date input[type="text"]:hover  {
-    background-color: #ebebeb;
-    outline: none;
-}
-
-.date input[type="text"]:focus {
-    background-color: #ffffff;
-    outline: none;
-    border: 2px solid #e5e5e5;
-    padding-left: 11px;
-}
-
-
-
 
 /*        Нижний блок формы ползунки    */
 
@@ -579,7 +549,7 @@ body {
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
 }
 
 .range-block {
@@ -714,114 +684,6 @@ body {
 }
 .popup-submit:hover, .popup-submit:focus {
     background-color: #669ec0;
-}
-
-
-
-/*.filter-range-block {
-    width: 50%;
-    display: flex;
-    margin-bottom: 55px;
-    flex-direction: row;
-    align-items: center;
-}
-
-/*.range.adults, .range.children {
-    width: 50%;
-   line-height: 26px;
-    text-align: left;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-
-.range.adults {
-    margin-right: auto;
-}
-
-.range.children {
-    margin-right: auto;
-    text-align: right;
-    padding-right: 26px;
-}
-
-/*.wrapper-range {
-    width: 114px;
-    height: 38px;
-    position: relative;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-
-.wrapper-range  .minus-btn, .lead-form__popup .plus-btn {
-    width: 26px;
-    height: 26px;
-    background-color: #f2f2f2;
-    border: none;
-    position: absolute;
-    
-}
-
-.wrapper-range input[type="text"] {
-    width: 114px;
-    border: none;
-    font-size: 14px;
-    line-height: 26px;
-    padding: 6px 35px;
-    text-align: center;
-    
-}
-
-
-.wrapper-range  .minus-btn {
-    top: 6px;
-    left: 6px;
-}
-
-.wrapper-range .plus-btn {
-    top: 6px;
-    right: 6px;
-}
-
-.minus-btn::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 3px;
-    height: 13px;
-    background-color: #a9a9a9;
-}
-
-.minus-btn::before {
-    top: 24%;
-    left: 44%;
-    
-    transform: rotate(90deg);
-}
-
-.wrapper-range .plus-btn::before, .wrapper-range .plus-btn::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 3px;
-    height: 13px;
-    background-color: #a9a9a9;
-}
-
-.wrapper-range .plus-btn::before  {
-    top: 6px;
-    left: 12px;
-    transform: rotate(90deg);
-}
-
-.wrapper-range .plus-btn::after {
-    top: 25%;
-    left: 45%;
-}
-
-.minus-btn:hover::before, .plus-btn:hover::before, .plus-btn:hover::after {
-    background-color: #000000;
 }
 
 /*            КОНЕЦ ФОРМА ОБРАТНОЙ СВЯЗИ        */
@@ -1065,7 +927,6 @@ p.filter-range-title {
   cursor: pointer;
 }
 
-
 .range-toggle-min {
     left: 0;
 }
@@ -1073,7 +934,6 @@ p.filter-range-title {
 .range-toggle-max {
     left: 79%;
 }
-
 
 .filter-range input[type="submit"] {
     display: block;
@@ -1225,9 +1085,6 @@ p.filter-range-title {
 .updown-item:first-child .sorting-link {
     margin-right: 12px;
 }
-
-
-
 
 /*    Конец Сортировка результата    */
 
@@ -1482,27 +1339,6 @@ p.filter-range-title {
 }
 
 
-
-/*.footer-socials__fb a {
-    background-image: url(../img/fb-icon.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.footer-socials__yt a {
-    background-image: url(../img/youtube-icon.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.footer-info__creater {
-    display: flex;
-    margin-left: auto;
-    width: 197px;
-    font-size: 14px;
-    text-transform: uppercase;
-    line-height: 26px;
-}*/
 
 .footer-info__creater span {
     float: left;
