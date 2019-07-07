@@ -1,53 +1,25 @@
 var link = document.querySelector(".lead-form__start");
-var hotelPopup = document.querySelector(".lead-form__popup");
+
+var searchHotel = document.querySelector(".lead-form__popup");
+var form = document.querySelector("form");
+
+var inCome = document.querySelector("[id=date-come]");
+
+var outCome  = document.querySelector("[id=date-out]");
+
+                                      
+                                      
 
 link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    hotelPopup.classList.toggle("lead-form__popup_show");  
+    searchHotel.classList.toggle("lead-form__popup_show");
+    inCome.focus();
 });
 
-
-/*
-
-var link = document.querySelector(".lead-form__start");
-var hotelPopup = document.querySelector(".lead-form__popup");
-var close = document.querySelector(".modal-close"); //Если есть кнопка закрыть
-var login = hotelPopup.querySelector("[name="date-come"]");
-
-link.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    hotelPopup.classList.add("lead-form__popup_show");
-    login.focus();
-    console.log("Нажата кнопка регистрации в гостинице");
+form.addEventListener("submit"), function(evt) {
     
-})
-
-close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    hotelPopup.classList.remove("modal-show")
-})
-
-
-*/
-
-/*
-
-var link = document.querySelector(".lead-form__start");
-var hotelPopup = document.querySelector(".lead-form__popup");
-
-var login = hotelPopup.querySelector("[name="date-come"]");
-
-link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    hotelPopup.classList.add("lead-form__popup_show");
-    login.focus();
-})
-
-link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    hotelPopup.classList.remove("lead-form__popup_show");
-
-});
-
-
-*/
+    if (!inCome.value || !outCome.value){
+        evt.preventDefault();
+        console.log("Нужно ввести дату заезда и выезда");
+    }  
+}
