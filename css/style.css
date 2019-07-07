@@ -508,7 +508,7 @@ body {
     height: 25px;
     position: absolute;
     z-index: 2;
-    top: 8px;
+    top: 5px;
     right: 6px;
     background-color: transparent;
     fill: #cacaca;
@@ -518,7 +518,7 @@ body {
     outline: none;
 }
 
-.calendar.two {
+.calendar {
     -webkit-appearance: none;
 }
 
