@@ -14,13 +14,13 @@
 <body>
     <div id="up" class="main-wrapper">
         <header class="header">
-            <a class="logo-link" href="index.html" target="_self"><img width="140" height="72" src="img/logo-sedona.svg" alt="Sedona, туристическая поездка в небольшой город в Аризоне" title="Логотип SEDONA"></a>
+            <a class="logo-link" href="index.html" target="_self"><img width="140" height="71" src="img/logo-sedona.svg" alt="Sedona, туристическая поездка в небольшой город в Аризоне" title="Логотип SEDONA"></a>
             <nav class="main-navigation">
                 <ul class="navigation-list">
-                    <li class="nav-item"><a href="index.html">Информация</a></li>
-                    <li class="nav-item"><a href="">Фото и Видео</a></li>
-                    <li class="nav-item"><a href="">Карта штата</a></li>
-                    <li class="nav-item list-item_active"><a href="">Гостиницы</a></li>
+                    <li class="nav-item"><a aria-label="Раздел Информация" href="#">Информация</a></li>
+                    <li class="nav-item"><a href="#">Фото и Видео</a></li>
+                    <li class="nav-item"><a href="#">Карта штата</a></li>
+                    <li class="nav-item list-item_active"><a href="#">Гостиницы</a></li>
                 </ul>
             </nav>
         </header>
@@ -29,10 +29,10 @@
             <h1 class="visually-hidden">Поиск и выбор гостиницы в Седоне</h1>
 
             <section class="search-form-block">
-                <form class="search-form-hotel" name="search-form-hotel" action="search-form-hotel.php" method="post">
+                <form class="search-form-hotel" name="search-form-hotel" action="https://echo.htmlacademy.ru" method="post">
                     <div class="search-form-hotel__input infrastructure">
                         <p>Инфраструктура:</p>
-                        <input class="visually-hidden infrastructure__input-checked" id="pool" name="pool" type="checkbox" value="">
+                        <input class="visually-hidden infrastructure__input-checked" id="pool" name="pool" type="checkbox" value="pool">
                         <label class="psevdo-checkbox" for="pool">Бассейн</label>
                         <input class="visually-hidden infrastructure__input-checked" id="parking" type="checkbox" name="parking" value="parking">
                         <label class="psevdo-checkbox" for="parking">Парковка</label>
@@ -65,7 +65,7 @@
                             <div class="range-toggle range-toggle-max"></div>
                         </div>
 
-                        <button type="submit" value="Показать">Показать</button>
+                        <button class="btn-show-hotel" type="submit" value="Показать">Показать</button>
                     </div>
                 </form>
 

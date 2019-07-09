@@ -80,7 +80,13 @@ body {
     padding-top: 14px;
     padding-bottom: 15px;
     list-style: none;
-    background-color: #ffffff;
+    width: 150px;
+    font-family: 'PT Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000000;
+    font-size: 14px;
+    line-height: 26px;
 }
 .nav-item:first-child, .nav-item:nth-child(2) {
    text-align: left;
@@ -89,23 +95,21 @@ body {
    text-align: right;
 }
 .nav-item:first-child {
-   margin-right: 147px;
+   margin-right: 91px;
 }
 .nav-item:last-child {
-   margin-left: 161px;
+   margin-left: 91px;
 }
 .nav-item a {
-    display: block;
     text-decoration: none;
-    font-size: 14px;
-    line-height: 26px;
     font-family: 'PT Sans', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
-    color: #000000;
-
+    color: inherit;
+    font-size: 14px;
+    line-height: 26px;
 }
-.list-item_active a {
+.list-item_active, .list-item_active a {
     color: #766357;
 }
 .nav-item:nth-child(3) {
@@ -118,8 +122,7 @@ body {
     outline: none;
 }
 .nav-item a:active {
-    color: #000000;
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
 }
 .nav-item:nth-child(2) {
     margin-right: auto;
@@ -809,11 +812,7 @@ label.psevdo-checkbox {
 label.psevdo-checkbox:last-of-type {
     margin-bottom: 0px;
 }
-.psevdo-checkbox:hover, .psevdo-checkbox:focus {
-    color: #ffffff;
-   /*#ff0000;
-   */
-}
+
 .psevdo-checkbox::before {
     display: inline-block;
     vertical-align: middle;
@@ -825,12 +824,38 @@ label.psevdo-checkbox:last-of-type {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+
+input[type="checkbox"]:focus:not(:checked) + .psevdo-checkbox {
+    opacity: 0.6;
+}
+
+
+
+.infrastructure__input-checked:hover:not(:disabled) + .psevdo-checkbox::before {
+    width: 31px;
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 9px;
+}
+
+.type-house__input-checked:hover:not(:disabled) + .psevdo-checkbox::before{
+    width: 31px;
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+
 .infrastructure__input-checked:checked + .psevdo-checkbox::before {
     width: 31px;
     background-image: url(../img/checkbox-on.svg);
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 9px;
+    opacity: 1;
 }
 .type-house__input-checked:checked + .psevdo-checkbox::before {
     width: 31px;
@@ -839,23 +864,36 @@ label.psevdo-checkbox:last-of-type {
     background-size: contain;
     margin-right: 10px;
 }
-
-.type-house__input-checked:disabled + .psevdo-checkbox::before {
-    width: 24px;
-    background-image: url(../img/checkbox-on-dis.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: 16px;
-    opacity: 0.6;
-}
 .infrastructure__input-checked:disabled + .psevdo-checkbox::before {
     width: 24px;
     background-image: url(../img/checkbox-off-dis.svg);
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 16px;
-    opacity: 0.6;
 }
+.infrastructure__input-checked:hover:disabled + .psevdo-checkbox::before, .infrastructure__input-checked:active:disabled + .psevdo-checkbox::before {
+    width: 31px;
+    background-image: url(../img/checkbox-on-dis.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 9px;
+}
+.type-house__input-checked:disabled + .psevdo-checkbox::before {
+    width: 24px;
+    background-image: url(../img/checkbox-off-dis.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 16px;
+}
+
+.type-house__input-checked:hover:disabled + .psevdo-checkbox::before {
+    width: 31px;
+    background-image: url(../img/checkbox-on-dis.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 9px;
+}
+
 .infrastructure, .type-house, .price-per-day {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -883,6 +921,8 @@ label.psevdo-checkbox:last-of-type {
 .type-house {
     margin-right: auto;
 }
+
+
 /* Секция с ползунками */
 .filter-range {
     width: 318px;

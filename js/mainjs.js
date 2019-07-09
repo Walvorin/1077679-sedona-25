@@ -9,6 +9,8 @@ var dateOut = showForm.querySelector("[name=date-out]");
 var totalAdult = showForm.querySelector("[name=adult]");
 var totalChild = showForm.querySelector("[name=children]");
 
+var formSortHotel = document.querySelector(".search-form-hotel");
+
 var isStorageSupport = true;
 var storage1 = "";
 var storage2 = "";
@@ -83,102 +85,15 @@ window.addEventListener("keydown", function (evt) {
       }
     }
   });
-    
-//    if(!dateCome.value) {
-//        evt.preventDefault();
-////        console.log("Вы забыли ввести поле Въезда");
-//        showForm.classList.remove("enter-error");
-//        showForm.offsetWidth = showForm.offsetWidth;
-//        showForm.classList.add("enter-error");
-//        dateCome.focus();
-//    } else {
-//        localStorage.setItem("dateCome", dateCome.value);
-//        dateCome.classList.remove("enter-error");
-//    };
-//    if (!dateOut.value) {
-//        evt.preventDefault();
-////        console.log("Вы забыли ввести поле Выезда");
-//        showForm.classList.remove("enter-error");
-//        showForm.offsetWidth = showForm.offsetWidth;
-//        showForm.classList.add("enter-error");
-//        dateOut.focus();
-//    } else {
-//        localStorage.setItem("dateOut", dateOut.value);
-//        dateOut.classList.remove("enter-error");
-//    };
-//    if (!totalAdult.value) {
-//        evt.preventDefault();
-////        console.log("Вы забыли ввести поле Выезда");
-//        showForm.classList.remove("enter-error");
-//        showForm.offsetWidth = showForm.offsetWidth;
-//        showForm.classList.add("enter-error");
-//        totalAdult.focus();
-//    } else {
-//        localStorage.setItem("totalAdult", totalAdult.value);
-//        totalAdult.classList.remove("enter-error");
-//    };
-//    if (!totalChild.value) {
-//        evt.preventDefault();
-////        console.log("Вы забыли ввести поле Выезда");
-//        showForm.classList.remove("enter-error");
-//        showForm.offsetWidth = showForm.offsetWidth;
-//        showForm.classList.add("enter-error");
-//        totalChild.focus();
-//    } else {
-//        localStorage.setItem("totalChild", totalChild.value);
-//        showForm.classList.remove("enter-error");
-//    };
-    
+
+
+
+
+
+
+formSortHotel.addEventListener("submit", function(evt){
+    evt.preventDefault();
 });
-
-//showForm.addEventListener("submit", function(evt){
-//    if(!dateCome.value) {
-//        evt.preventDefault();
-////        console.log("Вы забыли ввести поле Въезда");
-//        dateCome.classList.remove("enter-error");
-//        dateCome.offsetWidth = dateCome.offsetWidth;
-//        dateCome.classList.add("enter-error");
-//        dateCome.focus();
-//    } else {
-//        localStorage.setItem("dateCome", dateCome.value);
-//        dateCome.classList.remove("enter-error");
-//    };
-//    if (!dateOut.value) {
-//        evt.preventDefault();
-////        console.log("Вы забыли ввести поле Выезда");
-//        dateOut.classList.remove("enter-error");
-//        dateOut.offsetWidth = dateOut.offsetWidth;
-//        dateOut.classList.add("enter-error");
-//        dateOut.focus();
-//    } else {
-//        localStorage.setItem("dateOut", dateOut.value);
-//        dateOut.classList.remove("enter-error");
-//    };
-//    if (!totalAdult.value) {
-//        evt.preventDefault();
-////        console.log("Вы забыли ввести поле Выезда");
-//        totalAdult.classList.remove("enter-error");
-//        totalAdult.offsetWidth = totalAdult.offsetWidth;
-//        totalAdult.classList.add("enter-error");
-//        totalAdult.focus();
-//    } else {
-//        localStorage.setItem("totalAdult", totalAdult.value);
-//        totalAdult.classList.remove("enter-error");
-//    };
-//    if (!totalChild.value) {
-//        evt.preventDefault();
-////        console.log("Вы забыли ввести поле Выезда");
-//        totalChild.classList.remove("enter-error");
-//        totalChild.offsetWidth = totalChild.offsetWidth;
-//        totalChild.classList.add("enter-error");
-//        totalChild.focus();
-//    } else {
-//        localStorage.setItem("totalChild", totalChild.value);
-//        totalChild.classList.remove("enter-error");
-//    };
-//    
-//});
-
 
 
 

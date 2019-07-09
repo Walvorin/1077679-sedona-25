@@ -1,1 +1,92 @@
-var btnSearchForm=document.querySelector(".lead-form__start"),showForm=document.querySelector("form.lead-form__popup"),map=document.querySelector(".map-navigation"),dateCome=showForm.querySelector("[name=date-come]"),dateOut=showForm.querySelector("[name=date-out]"),totalAdult=showForm.querySelector("[name=adult]"),totalChild=showForm.querySelector("[name=children]"),isStorageSupport=!0,storage1="",storage2="",storage3="",storage4="";try{storage1=localStorage.getItem("dateCome"),storage2=localStorage.getItem("dateOut"),storage3=localStorage.getItem("totalAdult"),storage4=localStorage.getItem("totalChild")}catch(t){isStorageSupport=!1}showForm.classList.add("form-close"),btnSearchForm.addEventListener("click",function(t){t.preventDefault(),showForm.classList.toggle("form-show"),storage1?(dateCome.value=storage1,dateOut.focus()):dateCome.focus(),storage2?(dateOut.value=storage2,totalAdult.focus()):dateOut.focus(),storage3?(totalAdult.value=storage3,totalChild.focus()):totalAdult.focus(),storage4?totalChild.value=storage3:totalChild.focus()}),showForm.addEventListener("submit",function(t){dateCome.value&&dateOut.value&&totalAdult.value&&totalChild.value?(localStorage.setItem("dateCome",dateCome.value),localStorage.setItem("dateOut",dateOut.value),localStorage.setItem("totalAdult",totalAdult.value),localStorage.setItem("totalChild",totalChild.value),showForm.classList.remove("enter-error")):(t.preventDefault(),showForm.classList.remove("enter-error"),showForm.offsetWidth=showForm.offsetWidth,showForm.classList.add("enter-error"))}),window.addEventListener("keydown",function(t){27===t.keyCode&&(t.preventDefault(),showForm.classList.contains("form-close")&&(showForm.classList.remove("form-show"),showForm.classList.remove("enter-error")))});
+
+
+var btnSearchForm = document.querySelector(".lead-form__start"); 
+var showForm = document.querySelector("form.lead-form__popup");
+
+var map = document.querySelector(".map-navigation");
+var dateCome = showForm.querySelector("[name=date-come]");
+var dateOut = showForm.querySelector("[name=date-out]");
+var totalAdult = showForm.querySelector("[name=adult]");
+var totalChild = showForm.querySelector("[name=children]");
+
+
+var isStorageSupport = true;
+var storage1 = "";
+var storage2 = "";
+var storage3 = "";
+var storage4 = "";
+
+try {
+   storage1  = localStorage.getItem("dateCome");
+   storage2  = localStorage.getItem("dateOut");
+   storage3  = localStorage.getItem("totalAdult");
+   storage4  = localStorage.getItem("totalChild");
+ } catch (err) {
+   isStorageSupport = false;
+ }
+
+showForm.classList.add("form-close");
+
+btnSearchForm.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    showForm.classList.toggle("form-show");
+    if (storage1) {
+        dateCome.value = storage1;
+        dateOut.focus();
+    } else {
+        dateCome.focus();
+    };
+     if (storage2) {
+        dateOut.value = storage2;
+        totalAdult.focus();
+    } else {
+        dateOut.focus();
+    };
+     if (storage3) {
+        totalAdult.value = storage3;
+        totalChild.focus();
+    } else {
+        totalAdult.focus();
+    };
+     if (storage4) {
+        totalChild.value = storage3;
+    } else {
+        totalChild.focus();
+    };
+    
+  });
+
+
+showForm.addEventListener("submit", function(evt){
+    
+    if (!dateCome.value || !dateOut.value || !totalAdult.value || !totalChild.value) {
+        evt.preventDefault();
+        showForm.classList.remove("enter-error");
+        showForm.offsetWidth = showForm.offsetWidth;
+        showForm.classList.add("enter-error");
+    } else {
+        localStorage.setItem("dateCome", dateCome.value);
+        localStorage.setItem("dateOut", dateOut.value);
+        localStorage.setItem("totalAdult", totalAdult.value);
+        localStorage.setItem("totalChild", totalChild.value);
+        showForm.classList.remove("enter-error");
+    }
+    
+});
+
+
+window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (showForm.classList.contains("form-close")) {
+        showForm.classList.remove("form-show");
+        showForm.classList.remove("enter-error");
+      }
+    }
+  });
+
+
+
+
+
+
